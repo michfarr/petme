@@ -19,7 +19,7 @@
     <% @pets.each do |pet| %>
       <tr>
         <td><%= pet.name %></td>
-        <td><%= pet.image %></td>
+        <td><%= image_tag(pet.image) %></td>
         <td><%= pet.category %></td>
         <td><%= pet.price %></td>
         <td><%= pet.rating %></td>
