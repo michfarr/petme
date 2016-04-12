@@ -5,24 +5,25 @@
   <p>Please <%= link_to "register", new_user_path %> to be able to list your pets.</p>
 </div>
 
-
-<h1>Listing Pets</h1>
-
 <div class="container">
-<% @pets.each do |pet| %>
-  <div class="row">
-    <div class="col-md-3 div-main pet-image"><%= image_tag(pet.image) %></div>
-    <div class="col-md-3 div-main">
-      <div class="pet-name"><%= pet.name %></div>
-      <div class="pet-availability">AVAILABILITY</div>
-      <div class="div-minor">
-        <div class="pet-price"><%= pet.price %></div>
-        <div class="pet-rating"><%= pet.rating %></div>
+  <h1>Listing Pets</h1>
+
+
+  <% @pets.each do |pet| %>
+    <div class="row">
+      <div class="col-md-3 div-main pet-image"><%= image_tag(pet.image) %></div>
+      <div class="col-md-3 div-main">
+        <div class="pet-name"><%= link_to pet.name, pet %></div>
+        <div class="pet-availability">AVAILABILITY</div>
+        <div class="div-minor">
+          <div class="pet-price"><%= pet.price %></div>
+          <div class="pet-rating"><%= pet.rating %></div>
+        </div>
       </div>
+      <!-- <%= link_to 'Show', pet %></div>   -->
+      <div class="col-md-6 div-main pet-description"><%= pet.description %></div>
     </div>
-    <div class="col-md-6 div-main pet-description"><%= pet.description %></div>
-  </div>
-<% end %>
+  <% end %>
 </div>
 
 <%= link_to 'New Pet', new_pet_path %>
