@@ -14,3 +14,9 @@ Pet.create({ name: "Misty", image: "misty.jpg" , category: "cat", price: 15.00, 
 Pet.create({ name: "Spok", image: "spok.jpg" , category: "cat", price: 18.00, rating: 4.0, description: "I'm not emotional." })
 Pet.create({ name: "Jerry", image: "jerry.jpg" , category: "guinea pig", price: 8.00, rating: 3.0, description: "I like vegetables!" })
 Pet.create({ name: "Jumpy", image: "jumpy.jpg" , category: "rabbit", price: 10.00, rating: 3.0, description: "I love to jump!" })
+
+
+User.create({ name: "User1", email: "userone@pet.me", profile_picture: "http://indiabright.com/wp-content/uploads/2015/11/profile_picture_by_kyo_tux-d4hrimy.png"})
+User.create({ name: "User2", email: "usertwo@pet.me", profile_picture: "http://i.hizliresim.com/Xy80gj.jpg?dateline=1423171268"})
+User.create({ name: "User3", email: "userthree@pet.me", profile_picture: "http://static.giantbomb.com/uploads/original/30/303861/2808440-funny-cartoon-boys-facebook-profile-pictures.jpg"})
+User.create({ name: "User4", email: "userfour@pet.me", profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbmZj0nQkzFBW_o-bNBNtmMsDz4cB4gvvLcQMcFc_zAruDy78"})
