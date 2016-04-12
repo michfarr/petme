@@ -4,6 +4,14 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.order(name: :asc)
+  end
+
+  def show
+    @user = User.find( params[:id] )
+  end
+
   # POST /users
   # POST /users.json
   def create
@@ -12,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
 
-      redirect_to root_path, notice: "Hi, #{@user.name}!"
+      redirect_to users_path, notice: "Hi, #{@user.name}!"
     else
       render :new
     end
