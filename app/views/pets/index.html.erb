@@ -8,7 +8,43 @@
   <% end %>
 </div>
 
+<div class="jumbotron container-fluid">
+  
+</div>
+
 <div class="container">
+  <% @pets.each do |pet| %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thumbnail image">
+          <div class="cover"><%= image_tag(pet.image) %></div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="thumbnail texts">
+          <div class="pet-name"><%= link_to pet.name, pet, class: "btn btn-default" %></div>
+          <div class="pet-availability">AVAILABILITY</div>
+          <div class="div-minor">
+            Price renting per day: <span class="glyphicon glyphicon-euro"></span> <%= pet.price %>
+            <br/>
+            Rating: <%= pet.rating %><span class="glyphicon glyphicon-star-empty"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="thumbnail texts">
+          <%= pet.description %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+<!-- <div class="container">
   <% @pets.each do |pet| %>
     <div class="row">
       <div class="col-md-3 cover div-main pet-image"><%= image_tag(pet.image) %></div>
@@ -20,11 +56,10 @@
           <div class="pet-rating"><%= pet.rating %></div>
         </div>
       </div>
-      <!-- <%= link_to 'Show', pet %></div>   -->
       <div class="col-md-6 div-main pet-description"><%= pet.description %></div>
     </div>
   <% end %>
-</div>
+</div> -->
 
 <%= form_tag '/index', :method => 'get', id: "search-form" do %>
   <p>
