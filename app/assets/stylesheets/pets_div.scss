@@ -1,49 +1,57 @@
-.cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-}
-
 .jumbotron {
   background-image: url("./jumbotron.jpg");
   background-size: cover;
   height: 600px;
-  background-position: top;
   color: white;
+}
+
+.background-image {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top:0;
+  z-index: -100;
 }
 
 .thumbnail {
   margin-bottom: 20px;
-  height: 240px;
+  min-height: 250px;
 }
 
-.thumbnail img{
+.cover {
   max-height: 240px;
+  vertical-align: middle;
 }
 
+.button-more {
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
 
-@media (min-width: 600px){
+.container-index {
+  padding-top: 600px;
+}
 
-  .div-main {
-    height: 243px;
-  }
-  .cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  div .pet-image {
+// @media (min-width: 600px){
+
+
+  .pet-image {
     width: 240px;
     height: 240px;
     padding: 3px;
   }
 
+  .pet-description {
+    padding: 20px 20px;
+    height: 200px;
+  }
 
   .pet-name {
     padding: 20px 20px;
     height: 81px;
+    font-size: 25px;
   }
   .pet-availability {
     padding-left: 20px;
@@ -53,5 +61,3 @@
     padding-left: 20px;
     height: 81px;
   }
-
-}

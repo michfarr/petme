@@ -1,72 +1,56 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-user-line">
-  <% if current_user %>
-    <h3> Hello <strong><%= current_user.name %></strong></h3>
-  <% else %>
-    <p>Please <%= link_to "register", new_user_path %> to be able to list your pets.</p>
-  <% end %>
+<div class="background-image">
+  <div class="jumbotron container-fluid">
+
+  </div>
 </div>
 
-<div class="jumbotron container-fluid">
-  
-</div>
+<div class="container-index">
+  <div class="container">
+    <div class="container-user-line">
+      <% if current_user %>
+        <h3> Hello <strong><%= current_user.name %></strong></h3>
+      <% else %>
+        <p>Please <%= link_to "register", new_user_path %> to be able to list your pets.</p>
+      <% end %>
+    </div>
 
-<div class="container">
-  <% @pets.each do |pet| %>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail image">
-          <div class="cover"><%= image_tag(pet.image) %></div>
+    <% @pets.each do |pet| %>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="thumbnail">
+            <img ><%= image_tag(pet.image, class: "cover") %></img>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="thumbnail texts">
-          <div class="pet-name"><%= link_to pet.name, pet, class: "btn btn-default" %></div>
-          <div class="pet-availability">AVAILABILITY</div>
-          <div class="div-minor">
-            Price renting per day: <span class="glyphicon glyphicon-euro"></span> <%= pet.price %>
-            <br/>
-            Rating: <%= pet.rating %><span class="glyphicon glyphicon-star-empty"></span>
+        <div class="col-sm-12 col-md-8">
+
+          <div class="thumbnail">
+            <div class="col-sm-12 col-md-6">
+              <div class="pet-name"><strong><%= pet.name %></strong></div>
+              <div class="pet-availability">AVAILABILITY</div>
+              <div class="div-minor">
+                Price renting per day: <span class="glyphicon glyphicon-euro"></span> <%= pet.price %>
+                <br/>
+                Rating: <%= pet.rating %><span class="glyphicon glyphicon-star-empty"></span>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="pet-description">
+                <p><strong>Description:</strong></p>
+                  <p><%= pet.description %></p>
+
+                <div class="button-more"><p><%= link_to "Rent Me!", pet, class: "btn btn-warning pull-right", role: "button" %></p></div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="thumbnail texts">
-          <%= pet.description %>
-        </div>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+    <%= link_to 'New Pet', new_pet_path, class: "btn btn-default" %> |
+    <%= link_to 'Users', users_path, class: "btn btn-default" %>
+  </div>
 </div>
-
-
-
-<!-- <div class="container">
-  <% @pets.each do |pet| %>
-    <div class="row">
-      <div class="col-md-3 cover div-main pet-image"><%= image_tag(pet.image) %></div>
-      <div class="col-md-3 div-main">
-        <div class="pet-name"><%= link_to pet.name, pet %></div>
-        <div class="pet-availability">AVAILABILITY</div>
-        <div class="div-minor">
-          <div class="pet-price"><%= pet.price %></div>
-          <div class="pet-rating"><%= pet.rating %></div>
-        </div>
-      </div>
-      <div class="col-md-6 div-main pet-description"><%= pet.description %></div>
-    </div>
-  <% end %>
-</div> -->
-
-<%= form_tag '/index', :method => 'get', id: "search-form" do %>
-  <p>
-    <%= text_field_tag :search, params[:search], placeholder: "Search name" %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-
-<%= link_to 'New Pet', new_pet_path, class: "btn btn-default" %> |
-<%= link_to 'Users', users_path, class: "btn btn-default" %>
