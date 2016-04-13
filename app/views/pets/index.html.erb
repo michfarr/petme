@@ -6,12 +6,9 @@
 </div>
 
 <div class="container">
-  <h1>Listing Pets</h1>
-
-
   <% @pets.each do |pet| %>
     <div class="row">
-      <div class="col-md-3 div-main pet-image"><%= image_tag(pet.image) %></div>
+      <div class="col-md-3 cover div-main pet-image"><%= image_tag(pet.image) %></div>
       <div class="col-md-3 div-main">
         <div class="pet-name"><%= link_to pet.name, pet %></div>
         <div class="pet-availability">AVAILABILITY</div>
