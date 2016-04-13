@@ -23,9 +23,9 @@
   <% end %>
 </div>
 
-<%= form_tag '/index', :method => 'get' do %>
+<%= form_tag '/index', :method => 'get', id: "search-form" do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search name" %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
