@@ -26,5 +26,12 @@
   <% end %>
 </div>
 
+<%= form_tag '/index', :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <%= link_to 'New Pet', new_pet_path %>
 <%= link_to 'Users', users_path %>

@@ -4,8 +4,15 @@ class PetsController < ApplicationController
   # GET /pets
   # GET /pets.json
   def index
-    @pets = Pet.all
+
+    if params[:search]
+      @pets = Pet.where( :name =~ /#{params[:search]}/i )
+    else
+      @pets = Pet.all
+    end
+
   end
+
 
   # GET /pets/1
   # GET /pets/1.json
