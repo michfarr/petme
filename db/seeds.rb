@@ -15,8 +15,17 @@ Pet.create({ name: "Spok", image: "spok.jpg" , category: "cat", price: 18.00, ra
 Pet.create({ name: "Jerry", image: "jerry.jpg" , category: "guinea pig", price: 8.00, rating: 3.0, description: "I like vegetables!" })
 Pet.create({ name: "Jumpy", image: "jumpy.jpg" , category: "rabbit", price: 10.00, rating: 3.0, description: "I love to jump!" })
 
+users = [
+  [ "Anonymous", "userone@pet.me", "http://indiabright.com/wp-content/uploads/2015/11/profile_picture_by_kyo_tux-d4hrimy.png"
+  ],
+  [ "Skull", "userthree@pet.me", "http://i.hizliresim.com/Xy80gj.jpg?dateline=1423171268"
+  ],
+  [ "Albert", "userone@pet.me", "http://static.giantbomb.com/uploads/original/30/303861/2808440-funny-cartoon-boys-facebook-profile-pictures.jpg"
+  ],
+  [ "Killah", "userfour@pet.me", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbmZj0nQkzFBW_o-bNBNtmMsDz4cB4gvvLcQMcFc_zAruDy78"
+  ]
+]
 
-User.create({ name: "User1", email: "userone@pet.me", profile_picture: "http://indiabright.com/wp-content/uploads/2015/11/profile_picture_by_kyo_tux-d4hrimy.png"})
-User.create({ name: "User2", email: "usertwo@pet.me", profile_picture: "http://i.hizliresim.com/Xy80gj.jpg?dateline=1423171268"})
-User.create({ name: "User3", email: "userthree@pet.me", profile_picture: "http://static.giantbomb.com/uploads/original/30/303861/2808440-funny-cartoon-boys-facebook-profile-pictures.jpg"})
-User.create({ name: "User4", email: "userfour@pet.me", profile_picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbmZj0nQkzFBW_o-bNBNtmMsDz4cB4gvvLcQMcFc_zAruDy78"})
+users.each do | name, email, profile_picture |
+  User.create( name: name, email: email, profile_picture: profile_picture )
+end
