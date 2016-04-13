@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-  <br>
-  <p>Please <%= link_to "register", new_user_path %> to be able to list your pets.</p>
+<div class="container-user-line">
+  <% if current_user %>
+    <h3> Hello <strong><%= current_user.name %></strong></h3>
+  <% else %>
+    <p>Please <%= link_to "register", new_user_path %> to be able to list your pets.</p>
+  <% end %>
 </div>
 
 <div class="container">
@@ -30,5 +33,5 @@
   </p>
 <% end %>
 
-<%= link_to 'New Pet', new_pet_path %>
-<%= link_to 'Users', users_path %>
+<%= link_to 'New Pet', new_pet_path, class: "btn btn-default" %> |
+<%= link_to 'Users', users_path, class: "btn btn-default" %>
