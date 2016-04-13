@@ -6,10 +6,26 @@ class PetsController < ApplicationController
   def index
 
     if params[:search]
-      @pets = Pet.where( :name =~ /#{params[:search]}/i )
+      pets = Pet.where(name: params[:search] )
+      if pets.present?
+        @pets = pets
+      else
+        @pets = Pet.all.order('created_at DESC')
+      end
     else
-      @pets = Pet.all
+      @pets = Pet.all.order('created_at DESC')
     end
+    # def index
+    #    if params[:search]
+    #      @users = User.where(city: params[:search])
+    #      unless @users.count > 0
+    #        @users = User.all.order('created_at DESC')
+    #      end
+    #    else
+    #      @users = User.all.order('created_at DESC')
+    #    end
+    #  end
+
 
   end
 
