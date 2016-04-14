@@ -6,7 +6,7 @@ class PetsController < ApplicationController
   def index
 
     if params[:search]
-      pets = Pet.where(name: params[:search] )
+      pets = Pet.where("name ILIKE ?", "%#{params[:search]}%")
       if pets.present?
         @pets = pets
       else
@@ -15,17 +15,6 @@ class PetsController < ApplicationController
     else
       @pets = Pet.all.order('created_at DESC')
     end
-    # def index
-    #    if params[:search]
-    #      @users = User.where(city: params[:search])
-    #      unless @users.count > 0
-    #        @users = User.all.order('created_at DESC')
-    #      end
-    #    else
-    #      @users = User.all.order('created_at DESC')
-    #    end
-    #  end
-
 
   end
 
