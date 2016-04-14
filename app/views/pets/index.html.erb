@@ -27,7 +27,7 @@
         <div class="col-sm-12 col-md-8">
 
           <div class="thumbnail">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-md-6">
               <div class="pet-name"><strong><%= pet.name %></strong></div>
               <div class="pet-availability">AVAILABILITY</div>
               <div class="div-minor">
@@ -37,12 +37,12 @@
               </div>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-md-6">
               <div class="pet-description">
                 <p><strong>Description:</strong></p>
                   <p><%= pet.description %></p>
 
-                <div class="button-more"><p><%= link_to "Rent Me!", pet, class: "btn btn-warning pull-right", role: "button" %></p></div>
+                <div class="button-more"><p><%= link_to "Rent Me!", pet, class: "btn btn-primary pull-right", role: "button" %></p></div>
               </div>
             </div>
 
