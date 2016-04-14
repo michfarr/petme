@@ -1,6 +1,17 @@
-// Place all the styles related to the Pets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// File for Styling layout and navbar
+
+
+//container styles
+.container-layout {
+  padding-top: 70px;
+  // padding-left: 50px;
+}
+
+.container-layout .navbar {
+  padding-left: 35px;
+}
+
+
 html, body {
   height: 100%;
 }
@@ -13,6 +24,8 @@ html, body {
   margin: 0 auto -60px;
 }
 
+
+//footer styles
 #push,
 #footer {
   height: 60px;
@@ -20,11 +33,14 @@ html, body {
 #footer {
   background-color: #eee;
 }
-
-.search-btn {
-  float: right;
+.footer {
+  padding-top: 20px;
+  text-align: center;
+  color: #777;
 }
 
+
+//navbar styles
 .navbar-inverse {
   background: rgba(0,0,0,0.4);
   border: none;
@@ -38,21 +54,11 @@ html, body {
   font-size: 35px;
 }
 
-.footer {
-  padding-top: 20px;
-  text-align: center;
-  color: #777;
+.search-btn {
+  float: right;
 }
 
-.container-layout {
-  padding-top: 70px;
-  // padding-left: 50px;
-}
-
-
-.container-layout .navbar {
-  padding-left: 35px;
-}
+//responsive css for smaller screens
 
 @media (max-width: 767px) {
   #footer {
