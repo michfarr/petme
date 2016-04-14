@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :categories
   resources :pets
   resources :users
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   get '/index' => 'pets#index'
+
+  get 'user_pets/:user_id' => 'pets#user', as: :user_pets
   root 'pets#index'
 
 
