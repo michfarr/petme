@@ -1,8 +1,13 @@
+//File for stiling css
+
+
+//header image
 .jumbotron {
   background-image: url("./jumbotron3.jpg");
   background-size: cover;
   height: 600px;
   color: white;
+  background-position: center;
 }
 
 .background-image {
@@ -13,6 +18,16 @@
   z-index: -100;
 }
 
+//container style to make content below header image and to make some space between buttons and footer
+.container-index {
+  padding-top: 600px;
+}
+
+.container {
+  padding-bottom: 40px;
+}
+
+//thumbnail images and thing related
 .thumbnail {
   margin-bottom: 20px;
   min-height: 250px;
@@ -30,15 +45,39 @@
   right: 20px;
 }
 
-.container-index {
-  padding-top: 600px;
+.pet-image {
+  width: 240px;
+  height: 240px;
+  padding: 3px;
 }
 
-// @media (min-width: 600px){
-@media (max-width: 767px) {
+.pet-description {
+  padding: 20px 20px;
+  height: 200px;
+}
+
+.pet-name {
+  padding: 20px 20px;
+  height: 81px;
+  font-size: 25px;
+}
+.pet-availability {
+  padding-left: 20px;
+  height: 81px;
+}
+.div-minor {
+  padding-left: 20px;
+  height: 81px;
+}
+
+//Responsive code for smaller screens
+@media (max-width: 990px) {
   .thumbnail {
     margin-bottom: 10px;
     // height: 250px;
+  }
+  .pet-description {
+    max-height: 100px;
   }
 
   .button-more {
@@ -49,35 +88,14 @@
   }
 
   .div-minor {
-    height: 50px;
+    max-height: 30px;
+  }
+
+  .pet-availability {
+    max-height: 40px;
   }
 
   .container-show {
     padding-top: 40px;
   }
 }
-
-  .pet-image {
-    width: 240px;
-    height: 240px;
-    padding: 3px;
-  }
-
-  .pet-description {
-    padding: 20px 20px;
-    height: 200px;
-  }
-
-  .pet-name {
-    padding: 20px 20px;
-    height: 81px;
-    font-size: 25px;
-  }
-  .pet-availability {
-    padding-left: 20px;
-    height: 81px;
-  }
-  .div-minor {
-    padding-left: 20px;
-    height: 81px;
-  }
