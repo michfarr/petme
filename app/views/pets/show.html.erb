@@ -3,56 +3,52 @@
 <div class="container">
   <div class="container-show">
     <div class="row">
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-4">
         <div class="thumbnail">
-              <div class="caption">
+          <img ><%= image_tag(@pet.image) %></img>
+          <div class="caption">
+            <h3>
+              <strong>Name:</strong>
+              <%= @pet.name %>
+            </h3>
 
-              <h3>
-                <strong>Name:</strong>
-                <%= @pet.name %>
-              </h3>
+            <p>
+              <strong>Category:</strong>
+              <%= @pet.category %>
+            </p>
 
-              <p>
-                <strong>Category:</strong>
-                <%= @pet.category %>
-              </p>
+            <p>
+              <strong>Price:</strong>
+              <span class="glyphicon glyphicon-euro"></span>
+              <%= @pet.price %>
+            </p>
 
-              <p>
-                <strong>Price:</strong>
-                <span class="glyphicon glyphicon-euro"></span>
-                <%= @pet.price %>
-              </p>
-
-              <p>
-                <strong>Rating:</strong>
-                <%= @pet.rating %>
-                <span class="glyphicon glyphicon-star-empty"></span>
-              </p>
-
+            <p>
+              <strong>Rating:</strong>
+              <%= @pet.rating %>
+              <span class="glyphicon glyphicon-star-empty"></span>
+            </p>
           </div>
         </div>
       </div>
-
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-8">
         <div class="thumbnail">
-        <p>
-          <strong>Description:</strong>
-          <%= @pet.description %>
-        </p>
+          <div class="col-sm-12 col-md-6">
+            <p><strong>Description:</strong></p>
+            <p><%= @pet.description %></p>
+
+          </div>
+
+          <div class="col-sm-12 col-md-6">
+
+          <p>
+            <strong>Comments:</strong></p>
+            <p> • "I had a great time with this pet! I felt a huge conection, like it was mine!"</p>
+            <p> • "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero." </p>
+
+        </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <div class="thumbnail comments">
-      <p>
-        <strong>Comments:</strong>
-        <p> • "I had a great time with this pet! I felt a huge conection, like it was mine!"</p>
-        <p> • "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero." </p>
-        <p> • "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."</p>
-        <p> • "I had a great time with this pet! I felt a huge conection, like it was mine!"</p>
-        <p> • "I had a great time with this pet! I felt a huge conection, like it was mine!"</p>
-      </p>
-    </div>
-  </div>
 
     </div>
 
