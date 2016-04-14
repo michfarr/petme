@@ -1,6 +1,11 @@
 class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
+  def User
+    @user = User.find( params[:user_id] )
+
+    @pets = Pet.where( user: @user ).order(created_at: :desc )
+  end
   # GET /pets
   # GET /pets.json
   def index
@@ -22,6 +27,7 @@ class PetsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
+    @pet = Pet.find( params[:id] )
   end
 
   # GET /pets/new
@@ -36,7 +42,7 @@ class PetsController < ApplicationController
   # POST /pets
   # POST /pets.json
   def create
-    @pet = Pet.new(pet_params)
+    @pet = Pet.new( pet_params, user: current_user )
 
     respond_to do |format|
       if @pet.save
