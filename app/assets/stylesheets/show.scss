@@ -8,6 +8,16 @@
   border-radius: 0px;
 }
 
+.thumb-show {
+  min-height: 300px;
+}
+
 .container {
   padding-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .thumb-show {
+    min-height: 250px;
+  }
 }

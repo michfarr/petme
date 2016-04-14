@@ -1,5 +1,5 @@
 .jumbotron {
-  background-image: url("./jumbotron.jpg");
+  background-image: url("./jumbotron3.jpg");
   background-size: cover;
   height: 600px;
   color: white;
@@ -35,7 +35,27 @@
 }
 
 // @media (min-width: 600px){
+@media (max-width: 767px) {
+  .thumbnail {
+    margin-bottom: 10px;
+    // height: 250px;
+  }
 
+  .button-more {
+    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .div-minor {
+    height: 50px;
+  }
+
+  .container-show {
+    padding-top: 40px;
+  }
+}
 
   .pet-image {
     width: 240px;
