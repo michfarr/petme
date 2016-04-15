@@ -132,20 +132,7 @@ describe PetsController do
         expect(response).to render_template("new")
       end
     end
-  end
-
-  describe "PUTS #update" do
-    context "with valid params" do
-      let(:valid_params) { { pet: {
-                        name: "barry",
-                        image: "image.jpg",
-                        category: "dog",
-                        price: 10,
-                        rating: 5,
-                        description: "What a pet!" } }
-                        }
-    end
-  end
+  end 
 
   describe "DELETE #destroy" do
     it "destroys the requested pet" do
@@ -162,7 +149,7 @@ describe PetsController do
       }.to change(Pet, :count).by(-1)
     end
 
-    it "redirects to the vehicles list" do
+    it "redirects to the pets list" do
       pet = Pet.create(
                         name: "barry",
                         image: "image.jpg",
