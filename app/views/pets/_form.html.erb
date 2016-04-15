@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<div class="row">
+  <div class="col-sm-12 col-md-6">
 <div class="form-group">
   <div class="field">
     <%= f.label :name %><br>
@@ -31,6 +33,8 @@
     <p class="help-block">Select multiple with Ctrl</p>
   </div>
 </div>
+</div>
+<div class="col-sm-12 col-md-6">
 <div class="form-group">
   <div class="field">
     <%= f.label :price %><br>
@@ -53,5 +57,7 @@
   <div class="actions">
     <%= f.submit (@pet.new_record? ? "Create" : "Update"), class: "form-control btn btn-default" %>
   </div>
+</div>
+</div>
 </div>
 <% end %>
