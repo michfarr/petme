@@ -51,7 +51,7 @@ class PetsController < ApplicationController
     end
 
 
-    
+
   end
 
   # PATCH/PUT /pets/1

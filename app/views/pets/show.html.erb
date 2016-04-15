@@ -14,7 +14,9 @@
 
             <p>
               <strong>Category:</strong>
-              <%= @pet.category %>
+              <% @pet.categories.each do | category | %>
+                <%= link_to "#{category.name}", category, class: "btn btn-primary btn-xs" %>
+              <% end %>
             </p>
 
             <p>
