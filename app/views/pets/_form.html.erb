@@ -13,51 +13,54 @@
 
 <div class="row">
   <div class="col-sm-12 col-md-6">
-<div class="form-group">
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control", placeholder: "Fill in the pet's name" %>
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, class: "form-control", placeholder: "Fill in the pet's name" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :image %><br>
+        <%= f.text_field :image, class: "form-control", placeholder: "Fill in the URL" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: "form-control", placeholder: "Keep it short and punchy" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :price %><br>
+        <%= f.text_field :price, class: "form-control", placeholder: "Price in €" %>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class="form-group">
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image, class: "form-control", placeholder: "Fill in the URL" %>
+  <div class="col-sm-12 col-md-6">
+    <div class="form-group">
+      <div class="field">
+        <%= f.label :rating %><br>
+        <%= f.text_field :rating, class: "form-control", placeholder: "Please be reasonable" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :categories, :class => "control-label" %>
+      <div>
+        <% categories = Category.all.map{ |t| [t.name, t.id]}.sort %>
+        <%= f.select :category_ids, categories, { class: "form-control", prompt: true }, { multiple: true, size: 10 } %>
+        <p class="help-block">Select multiple with Ctrl</p>
+      </div>
+    </div>
+    <br/>
+
+    <div class="form-group">
+      <div class="actions">
+        <%= f.submit (@pet.new_record? ? "Create" : "Update"), class: "form-control btn btn-default" %>
+      </div>
+    </div>
   </div>
-</div>
-<div class="form-group">
-  <%= f.label :categories, :class => "control-label" %>
-  <div>
-    <% categories = Category.all.map{ |t| [t.name, t.id]}.sort %>
-    <%= f.select :category_ids, categories, { class: "form-control", prompt: true }, { multiple: true, size: 10 } %>
-    <p class="help-block">Select multiple with Ctrl</p>
-  </div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6">
-<div class="form-group">
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price, class: "form-control", placeholder: "Price in €" %>
-  </div>
-</div>
-<div class="form-group">
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating, class: "form-control", placeholder: "Please be reasonable" %>
-  </div>
-</div>
-<div class="form-group">
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control", placeholder: "Keep it short and punchy" %>
-  </div>
-</div>
-<div class="form-group">
-  <div class="actions">
-    <%= f.submit (@pet.new_record? ? "Create" : "Update"), class: "form-control btn btn-default" %>
-  </div>
-</div>
-</div>
 </div>
 <% end %>
