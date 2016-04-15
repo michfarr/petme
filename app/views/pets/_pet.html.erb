@@ -35,14 +35,9 @@
     </div>
   </div>
 
-  <h3><%= link_to pet.name, pet %></h3>
-  <% if !defined?(hide_user) || !hide_user %>
-    <h4><%= link_to pet.user.name, pet.user %></h4>
-  <% end %>
-
   <p>
     <% pet.categories.each do |category| %>
-      <%= link_to "#{category.name}", category, class: "btn btn-default btn-xs" %>
+      <%= link_to "#{category.name}", category, class: "btn btn-primary" %>
     <% end %>
   </p>
   <hr>

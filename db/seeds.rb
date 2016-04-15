@@ -55,7 +55,7 @@ user_pets.each do | user_name, pets |
   user = User.find_by( name: user_name )
 
   pets.each do | name, image, price, rating, description, categories |
-    pet = Pet.create( name: name, user_id: user.id, image: image, price: price, rating: rating, description: description )
+    pet = Pet.create( name: name, image: image, price: price, rating: rating, description: description )
 
     categories.split( ", ").each do | category_name |
       if
