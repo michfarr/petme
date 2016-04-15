@@ -109,7 +109,7 @@ describe PetsController do
 
       it "redirects to the show page" do
         post :create, valid_params
-        expect(response).to redirect_to(Pet.last)
+        expect(response).to redirect_to(pets_url)
       end
     end
 
@@ -131,6 +131,48 @@ describe PetsController do
         post :create, invalid_params
         expect(response).to render_template("new")
       end
+    end
+  end
+
+  describe "PUTS #update" do
+    context "with valid params" do
+      let(:valid_params) { { pet: {
+                        name: "barry",
+                        image: "image.jpg",
+                        category: "dog",
+                        price: 10,
+                        rating: 5,
+                        description: "What a pet!" } }
+                        }
+    end
+  end
+
+  describe "DELETE #destroy" do
+    it "destroys the requested pet" do
+      pet = Pet.create(
+                        name: "barry",
+                        image: "image.jpg",
+                        category: "dog",
+                        price: 10,
+                        rating: 5,
+                        description: "What a pet!"
+                        )
+      expect {
+        delete :destroy, :id => pet.id
+      }.to change(Pet, :count).by(-1)
+    end
+
+    it "redirects to the vehicles list" do
+      pet = Pet.create(
+                        name: "barry",
+                        image: "image.jpg",
+                        category: "dog",
+                        price: 10,
+                        rating: 5,
+                        description: "What a pet!"
+                        )
+      delete :destroy, :id => pet.id
+      expect(response).to redirect_to(pets_url)
     end
   end
 end
