@@ -1,0 +1,50 @@
+<div class="pet-item">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      <div class="thumbnail">
+        <div class="col-sm-12 col-md-6">
+          <img ><%= image_tag(pet.image, class: "cover") %></img>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <div class="caption">
+            <h3>
+              <strong>Name:</strong>
+              <%= pet.name %>
+            </h3>
+
+            <p>
+              <strong>Category:</strong>
+              <%= pet.category %>
+            </p>
+
+            <p>
+              <strong>Price:</strong>
+              <span class="glyphicon glyphicon-euro"></span>
+              <%= pet.price %>
+            </p>
+
+            <p>
+              <strong>Rating:</strong>
+              <%= pet.rating %>
+              <span class="glyphicon glyphicon-star-empty"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3><%= link_to pet.name, pet %></h3>
+  <% if !defined?(hide_user) || !hide_user %>
+    <h4><%= link_to pet.user.name, pet.user %></h4>
+  <% end %>
+
+  <p>
+    <% pet.categories.each do |category| %>
+      <%= link_to "#{category.name}", category, class: "btn btn-default btn-xs" %>
+    <% end %>
+  </p>
+  <hr>
+
+</div>

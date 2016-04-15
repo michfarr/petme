@@ -1,2 +1,9 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<div class="container">
+  <h1>Categories</h1>
+
+  <div>
+     <% @categories.each do |category| %>
+        <%= link_to "#{category.name} • #{category.pets.size}", category, class: "btn btn-primary" %> |
+     <% end %>
+  </div>
+</div>
