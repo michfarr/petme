@@ -25,6 +25,7 @@
 
 .container {
   padding-bottom: 40px;
+  min-height: 530px;
 }
 
 //thumbnail images and thing related
@@ -36,6 +37,7 @@
 .cover {
   max-height: 240px;
   vertical-align: middle;
+  max-width: 290px;
 }
 
 .button-more {
