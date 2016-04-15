@@ -19,23 +19,24 @@ user_pets = {}
 
 user_pets["Anonymous"] = [
   ["Bob", "bob.jpg", 30.00, 4.5, "I'm a very nice dog!", "dog, independent social"],
-  ["Marley", "marley.jpg", 35.00, 5.0, "I'm lazy dog!", "dog, social"],
-  ["Spot", "spot.jpg", 40.00, 4.0, "I'm a fast dog!", "dog, clean"]
+  ["Marley", "marley.jpg", 35.00, 5.0, "I'm lazy cat!", "cat, social"],
+  ["Spot", "spot.jpg", 40.00, 4.0, "I'm a fast cat!", "cat, clean"]
   ]
 
 user_pets["Skull"] = [
   ["Spark", "spark.jpg", 25.00, 4.5, "I'm a happy dog!", "dog, good for kids"],
   ["Misty", "misty.jpg", 15.00, 2.5, "I'm a very independent cat!", "cat, independent, clean"],
-  ["Spok", "spok.jpg", 18.00, 4.0, "I'm not emotional.", "rabbit, good for kids"]
+  ["Spock", "spok.jpg", 18.00, 4.0, "I'm not emotional.", "rabbit, good for kids"]
   ]
 
 user_pets["Albert"] = [
   ["Jerry", "jerry.jpg", 8.00, 3.0, "I like vegetables!", "guinea pig, aggressive"]
+  ["Grumpy Cat", "grumpycat.jpg", 20.00, 1.0, "I am grumpy", "cat, sad"]
   ]
 
 user_pets["Killah"] = [
-  ["Jumpy", "jumpy.jpg", 10.00, 3.0, "I love to jump!", "rabbit, sad"],
-  ["Jumpy2", "jumpy.jpg", 11.00, 4.0, "I love to jump more!", "rabbit, social"]
+  ["Jumpy", "jumpy.jpg", 10.00, 3.0, "I love to jump!", "dog, sad"],
+  ["Doge", "doge.jpg", 100.00, 5.0, "░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░\n░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░\n░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░\n░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░\n░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░\n░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░\n░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌░░\n░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐░░\n░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌░\n░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌░\n▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐░\n▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌\n▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐░\n░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌░\n░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░\n░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░\n░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░\n░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░\n░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░", "dog, good for kids"]
   ]
 
 categories = [
