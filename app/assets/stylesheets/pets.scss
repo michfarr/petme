@@ -28,15 +28,27 @@ html, body {
 //footer styles
 #push,
 #footer {
-  height: 60px;
-}
-#footer {
+  bottom:0;
+  width:100%;
   background-color: #eee;
-}
-.footer {
-  padding-top: 20px;
-  text-align: center;
-  color: #777;
+  .footer {
+    padding-top: 20px;
+    color: #777;
+    text-align: center;
+  }
+  .about {
+    float: left;
+    padding-left: 600px;
+    display: inline-block;
+  }
+  .contact {
+    float: right;
+    padding-right:600px;
+    display: inline-block;
+  }
+  .github {
+    text-align: center;
+  }
 }
 
 
