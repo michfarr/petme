@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :pets
   resources :users
+  get "/about" => "pets#about", as: :about
+  get "/contact" => "pets#contact", as: :contact
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

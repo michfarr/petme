@@ -51,7 +51,7 @@ class PetsController < ApplicationController
     end
 
 
-    
+
   end
 
   # PATCH/PUT /pets/1
@@ -76,6 +76,12 @@ class PetsController < ApplicationController
       format.html { redirect_to pets_url, notice: 'Pet was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def about
+  end
+
+  def contact
   end
 
   private

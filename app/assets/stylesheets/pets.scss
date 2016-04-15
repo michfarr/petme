@@ -16,6 +16,11 @@ html, body {
   height: 100%;
 }
 
+.gigantic {
+  font-size: 150px;
+  text-align: center;
+}
+
 #wrap {
   min-height: 100%;
   height: auto !important;
@@ -27,6 +32,7 @@ html, body {
 
 //footer styles
 #push,
+
 #footer {
   bottom:0;
   width:100%;
